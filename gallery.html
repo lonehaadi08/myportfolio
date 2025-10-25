@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Haadi Sabzar Lone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding-bottom: 2rem;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        /* Gallery Container */
+        .gallery-container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .gallery-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .gallery-header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .gallery-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .photo-placeholder {
+            aspect-ratio: 1;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+
+        .photo-placeholder:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .photo-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .photo-number {
+            font-size: 1.2rem;
+            color: #764ba2;
+            font-weight: 600;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery-header h1 {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .gallery-header p {
+                font-size: 1rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 0.8rem;
+            }
+
+            .photo-icon {
+                font-size: 2rem;
+            }
+
+            .photo-number {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- Gallery Container -->
+    <div class="gallery-container">
+        <div class="gallery-header">
+            <h1>Photo Gallery</h1>
+            <p>A collection of my photography work</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 1</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 2</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 3</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 4</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 5</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 6</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 7</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 8</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 9</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 10</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 11</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 12</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 13</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 14</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 15</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 16</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 17</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 18</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 19</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 20</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 21</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 22</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 23</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 24</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 25</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 26</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 27</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 28</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 29</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 30</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 31</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 32</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 33</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 34</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 35</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 36</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 37</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 38</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 39</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 40</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 41</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 42</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 43</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 44</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 45</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 46</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 47</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 48</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 49</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 50</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 51</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 52</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 53</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 54</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 55</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 56</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 57</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 58</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 59</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 60</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 61</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 62</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 63</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 64</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 65</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 66</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 67</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 68</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 69</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 70</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 71</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 72</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 73</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 74</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 75</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 76</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 77</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 78</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 79</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 80</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 81</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 82</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 83</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 84</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 85</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 86</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 87</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 88</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 89</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 90</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 91</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 92</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 93</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 94</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 95</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 96</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 97</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 98</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 99</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">📷</div>
+                <div class="photo-number">Photo 100</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

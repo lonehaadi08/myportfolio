@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haadi Sabzar Lone - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        /* Header Section */
+        .header-section {
+            background: white;
+            padding: 3rem 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-photo {
+            flex: 0 0 200px;
+        }
+
+        .photo-frame {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #667eea;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #667eea;
+        }
+
+        .header-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .name {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+            margin-bottom: 1rem;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                filter: drop-shadow(0 0 5px rgba(102, 126, 234, 0.5));
+            }
+            to {
+                filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.8));
+            }
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            background: white;
+            padding: 3rem 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .intro-section h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: white;
+            padding: 3rem 2rem;
+            margin: 2rem auto 3rem;
+            max-width: 1200px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .contact-section h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .contact-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: #764ba2;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 1rem;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .intro-section h2,
+            .contact-section h2 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo-frame {
+                width: 150px;
+                height: 150px;
+                font-size: 2rem;
+            }
+
+            .profile-photo {
+                flex: 0 0 150px;
+            }
+
+            .name {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="header-section" id="home">
+        <div class="profile-photo">
+            <div class="photo-frame">
+                📷
+            </div>
+        </div>
+        <div class="header-text">
+            <h1 class="name">Haadi Sabzar Lone</h1>
+            <p class="tagline">Tech-Enthusiast, Photo-Video Grapher, Video Editor, Innovator</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <h2>My Introduction</h2>
+        <p>Asalamualikum Warahmatullahi Wabarakatuh</p>
+        <p>This is Haadi Sabzar Lone, a proud Kashmiri Muslim. From childhood, I have been curious about electronic gadgets, often repairing and experimenting with them.</p>
+        <p>I am 14 years old (as of 2025) and have developed an innovation that is not yet patented but is in progress.</p>
+        <p>I am currently in Class 10 (JKBOSE Board), moving to Class 11 and starting my JEE preparations. I hope Allah will guide me and help me succeed in this life and the hereafter.</p>
+        <p>Since childhood, I have done crazy and challenging experiments that have shaped my logical thinking and creativity.</p>
+        <p>I live in Mahind, a village in Anantnag district, Jammu & Kashmir, India.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2>Contact Information</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong>WhatsApp (Tech or Photography Guidance):</strong>
+                <a href="https://wa.me/918899051944" target="_blank">+91 88990 51944</a>
+            </div>
+            <div class="contact-item">
+                <strong>Email (Video Editing Inquiries):</strong>
+                <a href="mailto:officialhaadi81@gmail.com">officialhaadi81@gmail.com</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
